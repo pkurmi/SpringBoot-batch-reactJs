@@ -10,6 +10,7 @@ export const MatchDetailCard = ({teamName, match}) => {
 	
 	// Boolean return teamName of the matchWinner.
 	const isMatchWon = teamName === match.matchWinner;
+	
 	return(
 		//If the team is winner then set as won-card. 
 		<div className={isMatchWon ? 'MatchDetailCard won-card' : 'MatchDetailCard lost-card'}>
@@ -21,6 +22,7 @@ export const MatchDetailCard = ({teamName, match}) => {
 				<h3 className="match-result"> {match.matchWinner} won by {match.resultMargin} {match.result} </h3>
 			</div>
 			
+			// Display addition information.
 			<div className="additional-detail">
 	       		 <h3>First Innings</h3>
 	         	 <p>{match.team1}</p>
